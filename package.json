@@ -1,0 +1,54 @@
+{
+  "name": "lilasia-icons",
+  "private": false,
+  "version": "0.0.3",
+  "type": "module",
+  "files": [
+    "dist",
+    "src/components/"
+  ],
+  "main": "./dist/lilasia-icon.umd.cjs",
+  "module": "./dist/lilasia-icon.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lilasia-icon.js",
+      "require": "./dist/lilasia-icon.umd.cjs"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "format": "prettier -w -l src",
+    "lint:fix": "eslint --ext .ts,vue --ignore-path .gitignore src --fix",
+    "lint": "eslint --ext .ts,vue --ignore-path .gitignore src",
+    "type-check": "vue-tsc --build --force"
+  },
+  "dependencies": {
+    "lilasia-icons": "^0.0.3",
+    "prettier": "^3.2.5",
+    "vue": "^3.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "path": "^0.12.7",
+    "typescript": "~5.3.0",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1",
+    "vue-tsc": "^2.0.6",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-vue": "^9.10.0"
+  }
+}
