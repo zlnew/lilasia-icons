@@ -7,6 +7,10 @@
     "dist",
     "src/components/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zlnew/lilasia-icons.git"
+  },
   "main": "./dist/lilasia-icon.umd.cjs",
   "module": "./dist/lilasia-icon.js",
   "exports": {

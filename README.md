@@ -23,7 +23,7 @@ First, import the `Icon` component into your Vue application:
 ```vue
 <script setup lang="ts">
 import 'lilasia-icons/dist/style.css'
-import Icon from 'lilasia-icons'
+import { Icon } from 'lilasia-icons'
 </script>
 
 <template>
@@ -49,7 +49,7 @@ The `Icon` component accepts the following props:
 ```vue
 <script setup lang="ts">
 import 'lilasia-icons/dist/style.css'
-import Icon from 'lilasia-icons'
+import { Icon } from 'lilasia-icons'
 </script>
 
 <template>
