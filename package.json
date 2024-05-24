@@ -31,7 +31,7 @@
     "format": "prettier -w -l src",
     "lint:fix": "eslint --ext .ts,vue --ignore-path .gitignore src --fix",
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore src",
-    "type-check": "vue-tsc --build --force"
+    "type-check": "vue-tsc"
   },
   "dependencies": {
     "lilasia-icons": "^0.0.3",
