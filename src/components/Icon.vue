@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { StyleValue, computed } from 'vue'
 
-type MaterialSymbolProps = {
+export type LilasiaIcon = {
   name: string
   filled?: boolean
   weight?: number | string
@@ -10,7 +10,7 @@ type MaterialSymbolProps = {
   size?: number | string
 }
 
-const props = withDefaults(defineProps<MaterialSymbolProps>(), {
+const props = withDefaults(defineProps<LilasiaIcon>(), {
   filled: false,
   weight: 400,
   grade: 0,
@@ -33,5 +33,5 @@ const style = computed<StyleValue>(() => {
 </script>
 
 <template>
-  <span :style="style" class="material-symbols-outlined">{{ name }}</span>
+  <span :style="style" class="lilasia-icon">{{ name }}</span>
 </template>

@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import TestIcon from './components/Icon.vue'
 import 'lilasia-icons/dist/style.css'
-import { Icon } from 'lilasia-icons'
+import Icon from 'lilasia-icons'
+import { ref } from 'vue'
+
+const name = ref()
 </script>
 
 <template>
-  <div>
-    <TestIcon name="search" />
-    <TestIcon name="home" />
-  </div>
-
-  <div>
-    <Icon name="search" />
-    <Icon name="favorite" />
+  <div class="container">
+    <h1>Lilasia Icons</h1>
+    <input v-model="name" type="text" placeholder="Type for icon name" />
+    <Icon :name="name" :size="50" />
   </div>
 </template>

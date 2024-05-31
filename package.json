@@ -1,29 +1,32 @@
 {
   "name": "lilasia-icons",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
-  "files": [
-    "dist",
-    "src/components/"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zlnew/lilasia-icons.git"
   },
-  "main": "./dist/lilasia-icon.umd.cjs",
-  "module": "./dist/lilasia-icon.js",
+  "files": ["dist"],
+  "main": "./dist/lilasia-icons.umd.cjs",
+  "module": "./dist/lilasia-icons.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/lilasia-icon.js",
-      "require": "./dist/lilasia-icon.umd.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/lilasia-icons.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/lilasia-icons.umd.cjs"
+      }
     },
     "./dist/style.css": {
       "import": "./dist/style.css",
       "require": "./dist/style.css"
     }
   },
-  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -34,7 +37,6 @@
     "type-check": "vue-tsc"
   },
   "dependencies": {
-    "lilasia-icons": "^0.0.3",
     "prettier": "^3.2.5",
     "vue": "^3.0.0"
   },

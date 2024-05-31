@@ -5,8 +5,8 @@
   src: url(../fonts/material-symbols-outlined.woff2) format('woff2');
 }
 
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
+.lilasia-icon {
+  font-family: 'Material Symbols Outlined' !important;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;

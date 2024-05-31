@@ -23,7 +23,7 @@ First, import the `Icon` component into your Vue application:
 ```vue
 <script setup lang="ts">
 import 'lilasia-icons/dist/style.css'
-import { Icon } from 'lilasia-icons'
+import Icon from 'lilasia-icons'
 </script>
 
 <template>
@@ -49,7 +49,7 @@ The `Icon` component accepts the following props:
 ```vue
 <script setup lang="ts">
 import 'lilasia-icons/dist/style.css'
-import { Icon } from 'lilasia-icons'
+import Icon from 'lilasia-icons'
 </script>
 
 <template>
@@ -59,4 +59,23 @@ import { Icon } from 'lilasia-icons'
     <Icon name="search" :size="30" />
   </div>
 </template>
+```
+
+## Style Customization
+
+If you want to customize the icon style, just ovveride this:
+
+```css
+.lilasia-icon {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}
 ```
