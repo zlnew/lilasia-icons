@@ -63,7 +63,7 @@ import Icon from 'lilasia-icons'
 
 ## Style Customization
 
-If you want to customize the icon style, just ovveride this:
+If you want to customize the icon style, just override this:
 
 ```css
 .lilasia-icon {
