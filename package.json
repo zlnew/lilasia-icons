@@ -5,9 +5,11 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zlnew/lilasia-icons.git"
+    "url": "git+https://github.com/zlnew/lilasia-icons.git"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/lilasia-icons.umd.cjs",
   "module": "./dist/lilasia-icons.js",
   "types": "./dist/index.d.ts",
