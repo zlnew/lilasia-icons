@@ -10,6 +10,9 @@ const name = ref()
   <div class="container">
     <h1>Lilasia Icons</h1>
     <input v-model="name" type="text" placeholder="Type for icon name" />
-    <Icon :name="name" :size="50" />
+    <div class="result">
+      <Icon :name="name" :size="48" />
+      <button v-if="name"><Icon :name="name" /></button>
+    </div>
   </div>
 </template>

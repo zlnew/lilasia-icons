@@ -5,6 +5,8 @@ import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  root: './',
+  publicDir: 'public',
   plugins: [vue(), dts({ rollupTypes: true })],
   build: {
     lib: {

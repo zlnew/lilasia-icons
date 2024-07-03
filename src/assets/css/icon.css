@@ -2,10 +2,11 @@
   font-family: 'Material Symbols Outlined';
   font-style: normal;
   font-weight: 100 700;
-  src: url(../fonts/material-symbols-outlined.woff2) format('woff2');
+  src: url(/fonts/material-symbols-outlined.woff2);
 }
 
 .lilasia-icon {
+  color: inherit;
   font-family: 'Material Symbols Outlined' !important;
   font-weight: normal;
   font-style: normal;
@@ -17,6 +18,7 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+  vertical-align: bottom;
   font-feature-settings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48";
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
