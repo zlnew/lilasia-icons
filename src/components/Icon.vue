@@ -4,30 +4,21 @@ import { StyleValue, computed } from 'vue'
 export type LilasiaIcon = {
   name: string
   filled?: boolean
-  weight?: number | string
-  grade?: number | string
-  opticalSize?: number | string
   size?: number | string
 }
 
 const props = withDefaults(defineProps<LilasiaIcon>(), {
   filled: false,
-  weight: 400,
-  grade: 0,
-  opticalSize: 48,
   size: 24
 })
 
 const style = computed<StyleValue>(() => {
   const $fill = Number(props.filled)
-  const $wght = Number(props.weight)
-  const $grad = Number(props.grade)
-  const $opsz = Number(props.opticalSize)
   const $fontSize = Number(props.size)
 
   return {
     fontSize: `${$fontSize}px`,
-    fontVariationSettings: `'FILL' ${$fill}, 'wght' ${$wght}, 'GRAD' ${$grad}, 'opsz' ${$opsz}`
+    fontVariationSettings: `'FILL' ${$fill}, 'wght' 400, 'GRAD' 0, 'opsz' 48`
   }
 })
 </script>

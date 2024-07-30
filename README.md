@@ -39,9 +39,6 @@ The `Icon` component accepts the following props:
 
 - `name` (string, required): The name of the Material Symbol icon.
 - `filled` (boolean, optional): Whether the icon should be filled. Default is `false`.
-- `weight` (number | string, optional): The weight of the icon. Default is `400`.
-- `grade` (number | string, optional): The grade of the icon. Default is `0`.
-- `opticalSize` (number | string, optional): The optical size of the icon. Default is `48`.
 - `size` (number | string, optional): The size of the icon. Default is `24`.
 
 ## Example
@@ -67,6 +64,7 @@ If you want to customize the icon style, just override this:
 
 ```css
 .lilasia-icon {
+  color: inherit;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
