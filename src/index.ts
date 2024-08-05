@@ -1,5 +1,5 @@
-import './assets/css/icon.css'
-import Icon, { type LilasiaIcon } from './components/Icon.vue'
+import Icon, { type LilasiaIcon } from '@/components/Icon.vue'
+import '@/styles/lilasia-icons.css'
 
-export { LilasiaIcon }
+export type { LilasiaIcon }
 export default Icon

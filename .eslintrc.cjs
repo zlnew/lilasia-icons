@@ -1,14 +1,16 @@
 /* eslint-env node */
 module.exports = {
   root: true,
-  'extends': [
+  extends: [
     'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-strongly-recommended',
+    'plugin:vue/vue3-recommended',
     'eslint:recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting'
   ],
-  'rules': {
-    "vue/multi-word-component-names": ["off", {"ignores": []}],
+  rules: {
+    'vue/multi-word-component-names': ['off', { ignores: [] }]
   },
   parserOptions: {
     ecmaVersion: 'latest'
