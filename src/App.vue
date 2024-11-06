@@ -11,10 +11,11 @@ import {
 import { onMounted, ref } from 'vue'
 import Icon from './components/Icon.vue'
 import { computed } from 'vue'
+import IconMetadata from './api/Icon'
 
 const search = ref()
 const filled = ref(false)
-const icons = ref<any[]>([])
+const icons = ref<string[]>([])
 const filteredIcons = ref<any[]>([])
 const isLoading = ref(false)
 const limit = ref(100)
@@ -35,18 +36,13 @@ const fetchIcons = async () => {
   isLoading.value = true
 
   try {
-    const response = await fetch(
-      'https://raw.githubusercontent.com/marella/material-symbols/main/metadata/versions.json'
-    )
+    const iconNames = await IconMetadata.getNames()
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok')
+    if (iconNames) {
+      icons.value = iconNames
     }
-
-    const data = await response.json()
-    icons.value = Object.keys(data)
   } catch (error) {
-    console.error('Error fetching icons:', error)
+    console.error(error)
   } finally {
     isLoading.value = false
   }
@@ -163,9 +159,11 @@ const setIconName = (icon: string) => {
         </div>
 
         <template v-if="filteredIcons.length >= limit" #footer>
-          <div class="flex items-center justify-end gap-8">
-            <AppButton text="Prev" :disabled="isPrevDisabled" @click="prev" />
-            <AppButton text="Next" :disabled="isNextDisabled" @click="next" />
+          <div class="flex items-center justify-between gap-8">
+            <div class="flex items-center gap-8">
+              <AppButton text="Prev" :disabled="isPrevDisabled" @click="prev" />
+              <AppButton text="Next" :disabled="isNextDisabled" @click="next" />
+            </div>
           </div>
         </template>
       </AppBlock>
